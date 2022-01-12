@@ -1,0 +1,31 @@
+#JSGF V1.0 utf-8 en;
+
+grammar music_play;
+
+public <musicPlay> = <Modals> <Play_Action> [<Pers_Pron_1stP_Obj>] ([<album> by] <artist> | <album> [by <artist>)]  | <song> [ from <album> | by <artist>)] | [some] <genre> [music]);
+
+public <musicPlayWant> = <Pers_Pron_1stP_Subj> <Want> to <Listen_Action> ([<album> by] <artist> | <album> [by <artist>)]  | <song> [ from <album> | by <artist>)] | [some] <genre> [music]);
+
+<pers_pron_1stP_Subj> = i | we ;
+
+<pers_pron_1stP_Obj> = me | us ;
+
+<pers_pron_2ndP> = you ;
+
+<modal> = can | could | will | would  ;
+
+<want> = want | would like | 'd like ;
+
+<play_Action> = play | put on ;
+
+<listen_Action> = listen to | hear ;
+
+<artist> = beatles | radio head | cake | pink floyd; 
+
+<song> = confortably numb | paranoid android | let it be | hey jude;
+
+<genre> = jazz | rock | punk | classic;
+
+<album> = ummagumma | twist and shout | ok computer | fashion nugget;
+
+

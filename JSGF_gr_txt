@@ -1,0 +1,39 @@
+#JSGF V1.0 utf-8 gr;
+
+grammar music_play;
+
+public <musicPlayCommand> = (<play_Imper> | βάλε | βάλτε) ([<articleAcc> <album> <entityBy>] <artist> | <articleAcc> <album> [<entityBy> <artist>)] | <articleAcc> <song> [ <entityBy> (<album> | <artist>) ] | [κάτι (σε | από) ] <genre> [μουσική]);
+
+public <musicPlayRequest> = [<can_2ndP>] (<play_subjunct_2ndP> | να βάλεις | να βάλετε) ([<articleAcc> <album> <entityBy>] <artist> | <articleAcc> <album> [<entityBy> <artist>)] | <articleAcc> <song> [ <entityBy> (<album> | <artist>) ] | [κάτι (σε | από) ] <genre> [μουσική]);
+
+public <musicPlayWant> = <want_1stP> <listen_subjunct_1stP> ([<articleAcc> <album> <entityBy>] <artist> | <articleAcc> <album> [<entityBy> <artist>)] | <articleAcc> <song> [ <entityBy> (<album> | <artist>) ] | [κάτι (σε | από) ] <genre> [μουσική]);
+	
+
+
+<article_Nom> = ο | η | το | οι | τα;
+
+<article_Acc> = την| τη | το | τον | τους| τις | τα;
+
+<article_Gen> = του | της | των;
+
+<entityBy> = από [<articleAcc>] | <articleGen>;
+
+<play_Imper> = παίξε | παίξτε | παίχτε ;
+
+<can_1stP> = μπορώ | θα μπορούσα | μπορούμε | θα μπορούσαμε ;
+
+<can_2ndP> = μπορείς | θα μπορούσες | μπορείτε | θα μπορούσατε;
+
+<want_1stP> = θέλω | θα ήθελα | θα θελα |θέλουμε | θα θέλαμε ;
+
+<listen_subjunct_1stP> = να ακούσω | να ακούσουμε ;
+
+<play_subjunct_2ndP> = να παίξεις | να παίξετε ;
+
+<artist> = τρύπες | ξύλινα σπαθιά | χατζιδάκη | δεληβοριά; 
+
+<song> = δε χωράς πουθενά | λιωμένο παγωτό | βαλς των χαμένων ονείρων | αυτή που περνάει;
+
+<genre> = τζαζ | ροκ | λαϊκά | τραπ;
+
+<album> = χάλια | εννιά πληρωμένα τραγούδια | ξεσσαλονίκη| αθανασία;
