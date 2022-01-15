@@ -1,0 +1,89 @@
+#JSGF V1.0 utf-8 gr;
+
+grammar music_play;
+
+
+public <musicPlayCommand> = (<play_Imper> | βάλε ) 
+                            
+							( <article_Acc> <album> [ (από <article_Acc>* | <article_Gen> ) <artist>] |
+                            
+							<article_Acc> <song> [ (από <article_Acc>* | <article_Gen> ) (<artist> | <album>) ]|
+							
+							[από] [<article_Acc>] <artist> [ <article_Acc>* (<song> | <album>) ] |
+							
+							από <article_Acc>* <album> <article_Acc> <song> |
+							
+							[κάτι από | κάτι σε | λίγη |λίγο ] <genre> [μουσική] ) [<polite>] ;
+
+
+
+public <musicPlayRequest> = [<can_2ndP>] (<play_subjunct_2ndP> | να βάλεις )
+
+							( <article_Acc> <album> [ (από <article_Acc>* | <article_Gen> ) <artist>] |
+                            
+							<article_Acc> <song> [ (από <article_Acc>* | <article_Gen> ) (<artist> | <album>) ]|
+							
+							[από] [<article_Acc>] <artist> [ <article_Acc>* (<song> | <album>) ] |
+							
+							από <article_Acc>* <album> <article_Acc> <song> |
+							
+							[κάτι από | κάτι σε | λίγη |λίγο ] <genre> [μουσική] ) [<polite>] ;
+							
+							
+public <musicPlayWant> = <want_1stP> (<listen_subjunct_1stP> | <play_subjunct_2ndP> | να βάλεις ) 
+
+						( <article_Acc> <album> [ (από <article_Acc>* | <article_Gen> ) <artist>] |
+                            
+						<article_Acc> <song> [ (από <article_Acc>* | <article_Gen> ) (<artist> | <album>) ]|
+							
+						[από] [<article_Acc>] <artist> [ <article_Acc>* (<song> | <album>) ] |
+							
+						από <article_Acc>* <album> <article_Acc> <song> |
+							
+						[κάτι από | κάτι σε | λίγη |λίγο ] <genre> [μουσική] ) [<polite>] ;
+
+
+
+//  Grammar ------- Actions 
+
+<play_Imper> = παίξε ;
+
+<can_1stP> = μπορώ | θα μπορούσα | μπορούμε | θα μπορούσαμε ;
+
+<can_2ndP> = μπορείς | θα μπορούσες ;
+
+<want_1stP> = θέλω | θα ήθελα | θα θελα |θέλουμε | θα θέλαμε ;
+
+<listen_subjunct_1stP> = να ακούσω | να ακούσουμε ;
+
+<play_subjunct_2ndP> = να παίξεις ;
+
+
+// Grammar ------- Definitive Article
+
+<article_Nom> = ο | η | το | οι | τα;
+
+<article_Acc> = την| τη | το | τον | τους| τις | τα;
+
+<article_Gen> = του | της | των;
+
+
+
+// Music Objects
+
+<artist> = τρύπες | ξύλινα σπαθιά | χατζιδάκη | δεληβοριά; 
+
+<song> = δε χωράς πουθενά | λιωμένο παγωτό | βαλς των χαμένων ονείρων | αυτή που περνάει;
+
+<album> = χάλια | εννιά πληρωμένα τραγούδια | ξεσσαλονίκη | αθανασία;
+
+<genre> = τζαζ | ροκ | κλασσική | τραπ;
+
+
+
+<polite> = [σε] παρακαλώ | πλιζ ;
+
+
+
+
+
